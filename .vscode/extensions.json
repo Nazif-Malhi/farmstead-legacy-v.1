@@ -1,0 +1,18 @@
+{
+    "recommendations": [
+        "formulahendry.auto-rename-tag",
+        "bracketpaircolordlw.bracket-pair-color-dlw",
+        "softwaredotcom.swdc-vscode",
+        "mikestead.dotenv",
+        "rodrigovallades.es7-react-js-snippets",
+        "miguelsolorio.fluent-icons",
+        "glenn2223.live-sass",
+        "ritwickdey.liveserver",
+        "pkief.material-icon-theme",
+        "christian-kohler.path-intellisense",
+        "esbenp.prettier-vscode",
+        "bradlc.vscode-tailwindcss",
+        "rangav.vscode-thunder-client",
+        "gruntfuggly.todo-tree"
+    ]
+}
