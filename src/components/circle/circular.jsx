@@ -3,9 +3,10 @@ import styled from "styled-components";
 
 const CircularContainer = styled.div`
   position: absolute;
+  z-index: 10;
   transform: rotate(calc(360deg / 6 * (${(props) => props.num})))
     translateX(360px);
-  transform-origin: 20px;
+  transform-origin: 10px;
   width: 150px;
   height: 150px;
   background: #eefbf2;

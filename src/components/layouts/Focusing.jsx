@@ -13,7 +13,7 @@ import { Circular } from "../circle";
 
 const FocusContainer = styled.div`
   width: 100%;
-  height: 150vh;
+  height: 170vh;
   display: flex;
   padding: 20px 0px;
   justify-content: center;
@@ -21,7 +21,6 @@ const FocusContainer = styled.div`
   justify-content: center;
   align-items: center;
   overflow-y: hidden;
-  position: relative;
 
   h1 {
     font-family: "Rubik", sans-serif;
@@ -30,12 +29,25 @@ const FocusContainer = styled.div`
     font-size: 42px;
     color: black;
   }
+  .border {
+    margin-top: 160px;
+    width: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 600px;
+    border-radius: 50%;
+    background: black;
+    position: absolute;
+  }
+
   .style-wrapper {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100%;
+
     img {
       width: auto;
       height: 600px;
@@ -72,6 +84,7 @@ const Focusing = () => {
       <Circular num={3} img={infrastructure} clr={"#007bff"} />
       <Circular num={4} img={cities} clr={"#aeff00"} />
       <Circular num={5} img={consumtion_production} clr={"#04fc43"} />
+      {/* <div className="border"></div> */}
       <div className="style-wrapper">
         <img src={world} alt="world" />
       </div>
