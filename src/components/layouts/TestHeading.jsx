@@ -97,12 +97,10 @@ const TestHeading = () => {
         setTimer(0);
       }}
     >
-      <TestContainer
-      // trigger={trigger} timer={timer}
-      >
+      <TestContainer trigger={trigger} timer={timer}>
         <h1>Lets, help you in farm cultivation!</h1>
-        {/* <div className="banner" />
-        <div className="anime">{trigger && <img src={gif} alt="anime" />}</div> */}
+        <div className="banner" />
+        <div className="anime">{trigger && <img src={gif} alt="anime" />}</div>
       </TestContainer>
     </ScrollTrigger>
   );
