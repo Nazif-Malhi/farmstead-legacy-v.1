@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Counter from "../layouts/Counter";
+import Blog from "../layouts/Blog";
 import Focusing from "../layouts/Focusing";
 import Home from "../layouts/Home";
 import TestHeading from "../layouts/TestHeading";
@@ -19,7 +19,7 @@ const MockUp = () => {
       <TestingArea />
       <Focusing />
       <Work />
-      <Counter />
+      <Blog />
     </MockUpContainer>
   );
 };

@@ -78,12 +78,32 @@ const Focusing = () => {
     <FocusContainer>
       <h1>Our Vision</h1>
 
-      <Circular num={0} img={no_poverty} clr={"#ffbb00"} />
-      <Circular num={1} img={economic_growth} clr={"#ff0000"} />
-      <Circular num={2} img={zero_hunger} clr={"#04fc43"} />
-      <Circular num={3} img={infrastructure} clr={"#007bff"} />
-      <Circular num={4} img={cities} clr={"#aeff00"} />
-      <Circular num={5} img={consumtion_production} clr={"#04fc43"} />
+      <Circular num={0} img={no_poverty} clr={"#ffbb00"} head={"No Poverty"} />
+      <Circular
+        num={1}
+        img={economic_growth}
+        clr={"#ff0000"}
+        head={"Economic Growth"}
+      />
+      <Circular
+        num={2}
+        img={zero_hunger}
+        clr={"#04fc43"}
+        head={"Zero Hunger"}
+      />
+      <Circular
+        num={3}
+        img={infrastructure}
+        clr={"#007bff"}
+        head={"Infrastructure"}
+      />
+      <Circular num={4} img={cities} clr={"#aeff00"} head={"Inovation"} />
+      <Circular
+        num={5}
+        img={consumtion_production}
+        clr={"#04fc43"}
+        head={"Consumption"}
+      />
       {/* <div className="border"></div> */}
       <div className="style-wrapper">
         <img src={world} alt="world" />
