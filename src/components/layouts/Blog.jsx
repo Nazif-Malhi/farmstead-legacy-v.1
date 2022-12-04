@@ -2,11 +2,13 @@ import React from "react";
 import styled from "styled-components";
 import { Row, Col } from "react-bootstrap";
 import { blog_shape, lab } from "../../assets";
+import { SlickSlider } from "../carousel";
+import Counter from "./Counter";
 
 const BlogContainer = styled.div`
   width: 100%;
   height: 150vh;
-  justify-content: center;
+  // justify-content: center;
   display: flex;
   flex-direction: column;
   background: rgb(255, 255, 255);
@@ -46,6 +48,7 @@ const BlogContainer = styled.div`
       p {
         color: #7a7e9a;
         font-family: "Rubik", sans-serif;
+
         font-style: normal;
         font-weight: 400;
         font-size: 18px;
@@ -57,16 +60,42 @@ const BlogContainer = styled.div`
     height: 100%;
     padding: 60px;
     .main-section {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 2;
       background: url(${lab});
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
-      margin: 0px 90px;
-      z-index: 2;
     }
     .blog-section {
-      background: red;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      // justify-content: center;
+      h4 {
+        font-family: "Rubik", sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        margin-top: 60px;
+        padding: 20px;
+      }
     }
+  }
+  .row-counter {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(238, 251, 242, 1) 100%
+    );
   }
   .shadow {
     box-shadow: none !important;
@@ -98,8 +127,17 @@ const Blog = () => {
         </Col>
       </Row>
       <Row className="row-blog">
-        <Col className="main-section"></Col>
-        <Col className="blog-section"></Col>
+        <Col className="main-section">{/* <img src={lab} alt="lab" /> */}</Col>
+        <Col className="blog-section">
+          <SlickSlider />
+          <h4>
+            Research improves services and treatments not just for you but also
+            for future generations.{" "}
+          </h4>
+        </Col>
+      </Row>
+      <Row className="row-counter">
+        <Counter />
       </Row>
       <div className="shadow">
         <img src={blog_shape} alt="shape" />

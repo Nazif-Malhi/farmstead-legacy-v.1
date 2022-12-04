@@ -14,13 +14,10 @@ const TestContainer = styled.div`
   flex-direction: column;
   margin-top:20px;
   h1 {
-    font-size: 64px;
-    font-weigth: 500;
-    color:#209E2E;
     font-family: "Rubik", sans-serif;
           font-style: normal;
           font-weight: 700;
-          font-size: 62px;
+          font-size: 46px;
   }
   .banner{
     background: #eefbf2;
@@ -99,8 +96,8 @@ const TestHeading = () => {
     >
       <TestContainer trigger={trigger} timer={timer}>
         <h1>Lets, help you in farm cultivation!</h1>
-        <div className="banner" />
-        <div className="anime">{trigger && <img src={gif} alt="anime" />}</div>
+        {/* <div className="banner" />
+        <div className="anime">{trigger && <img src={gif} alt="anime" />}</div> */}
       </TestContainer>
     </ScrollTrigger>
   );
