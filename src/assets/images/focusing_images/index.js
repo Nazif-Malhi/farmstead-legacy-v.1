@@ -9,4 +9,5 @@ export { default as ico_small } from "./ico_small.png";
 export { default as world } from "./world.png";
 export { default as world2 } from "./world2.png";
 
-export { default as background } from "./background.jpg";
+// export { default as background } from "./background.jpg";
+export { default as background } from "./strawberry-field-min.jpg";

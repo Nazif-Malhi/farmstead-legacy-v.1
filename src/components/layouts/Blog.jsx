@@ -1,20 +1,21 @@
 import React from "react";
 import styled from "styled-components";
 import { Row, Col } from "react-bootstrap";
-import { Shape } from "../../assets";
+import { blog_shape, lab } from "../../assets";
 
 const BlogContainer = styled.div`
   width: 100%;
-  height: 100vh;
+  height: 150vh;
   justify-content: center;
   display: flex;
+  flex-direction: column;
   background: rgb(255, 255, 255);
+
   background: linear-gradient(
     0deg,
     rgba(255, 255, 255, 1) 74%,
     rgba(238, 251, 242, 1) 100%
   );
-
   .row-full {
     width: 100%;
     height: 220px;
@@ -33,6 +34,7 @@ const BlogContainer = styled.div`
         font-style: normal;
         font-weight: 700;
         font-size: 42px;
+        z-index: 2;
       }
     }
     .detailed-section {
@@ -50,12 +52,30 @@ const BlogContainer = styled.div`
       }
     }
   }
+  .row-blog {
+    width: 100%;
+    height: 100%;
+    padding: 60px;
+    .main-section {
+      background: url(${lab});
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      margin: 0px 90px;
+      z-index: 2;
+    }
+    .blog-section {
+      background: red;
+    }
+  }
   .shadow {
+    box-shadow: none !important;
     position: absolute;
+    top: 500%;
+    left: 0;
     img {
-      width: 600px;
+      max-width: 100%;
       height: auto;
-      box-shadow: none;
     }
   }
 `;
@@ -77,7 +97,13 @@ const Blog = () => {
           </p>
         </Col>
       </Row>
-      <div className="shadow">{/* <img src={Shape} alt="shape" /> */}</div>
+      <Row className="row-blog">
+        <Col className="main-section"></Col>
+        <Col className="blog-section"></Col>
+      </Row>
+      <div className="shadow">
+        <img src={blog_shape} alt="shape" />
+      </div>
     </BlogContainer>
   );
 };
