@@ -81,6 +81,7 @@ export default class Responsive extends Component {
                 para={
                   "Water content plays a crucial role in seed development, particularly at the seed sowing stage, and it ensures good seed germination seed drill consisted of a wheat "
                 }
+                
               />
             </div>
           </Slider>

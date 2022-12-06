@@ -50,7 +50,7 @@ const FocusContainer = styled.div`
 
     img {
       width: auto;
-      height: 600px;
+      height: 450px;
       -webkit-animation: spin 2s linear infinite; /* Safari */
       animation: spin 360s linear infinite;
       @-webkit-keyframes spin {
@@ -71,14 +71,22 @@ const FocusContainer = styled.div`
       }
     }
   }
+
+  
 `;
 
+
+
+
+
+
 const Focusing = () => {
+  
   return (
     <FocusContainer>
       <h1>Our Vision</h1>
 
-      <Circular num={0} img={no_poverty} clr={"#ffbb00"} head={"No Poverty"} />
+      <Circular num={0} img={no_poverty} clr={"#ffbb00"} head={"No Poverty"}   />
       <Circular
         num={1}
         img={economic_growth}
@@ -103,6 +111,7 @@ const Focusing = () => {
         img={consumtion_production}
         clr={"#04fc43"}
         head={"Consumption"}
+        className='consumption'
       />
       {/* <div className="border"></div> */}
       <div className="style-wrapper">
