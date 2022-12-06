@@ -38,7 +38,13 @@ const HomeContainer = styled.div`
       }
       .mg-lf {
         text-align: center;
+        padding: 15px;
+        
+        .description{
+          text-align: center;
+        }
       }
+      
       .row-container {
         width: 100%;
 
@@ -235,7 +241,7 @@ const Home = () => {
           </Row>
           <Row className="row-container mg-lf">
             <h1>Sustainable Agriculture does not deplete soils or people.</h1>
-            <p>
+            <p className="description">
               Farming isn’t something that can be taught. Each plant tells its
               own story that has to be read repeatedly.
             </p>

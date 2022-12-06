@@ -12,6 +12,8 @@ const TestingContainer = styled.div`
   background: url(${sunnylandscape});
   background-size: cover;
   background-repeat: no-repeat;
+  padding-left:120px;
+  padding-right:120px;
 `;
 
 const TestingArea = () => {

@@ -36,6 +36,8 @@ const TestCardContainer = styled.div`
     }
   }
   .card-shape {
+    text-align: center;
+    align-items: center;
     justify-content: flex-end;
     position: absolute;
     bottom: 0;
