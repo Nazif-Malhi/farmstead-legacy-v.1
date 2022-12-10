@@ -7,14 +7,20 @@ import Home from "../layouts/Home";
 import TestHeading from "../layouts/TestHeading";
 import TestingArea from "../layouts/TestingArea";
 import Work from "../layouts/Work";
+import NavbarHeader2 from "../navbar/NavbarHeader2";
+
 
 const MockUpContainer = styled.div`
   background: #eefbf2;
 `;
 
+
+
 const MockUp = () => {
+
   return (
     <MockUpContainer>
+      <NavbarHeader2  />
       <Home />
       <TestHeading />
       <TestingArea />
