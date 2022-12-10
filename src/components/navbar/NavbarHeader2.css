@@ -1,0 +1,38 @@
+
+.navbar{
+   font-family: 'Rubik',sans-serif;
+}
+.navbarSticky{
+    position: fixed !important;
+    z-index: 9999;
+    top: 0px; 
+    
+    height: 69px;
+    width: 100%;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    padding-left: 255px;
+    padding-right: 255px;
+    opacity: 1;
+    transition: .2s padding top ease-in-out;
+}   
+  .navbarFloat{
+    position: fixed;
+    z-index: 9999;
+    right: 17.5vw;
+    top: 30px;
+    background-color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 69px;
+    width: 65vw;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    
+}
+
+.searchBtn{
+    color: #209e2e;
+    --bs-btn-border-color: #209e2e;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #209e2e;
+}

@@ -42,6 +42,8 @@ const HomeContainer = styled.div`
         
         .description{
           text-align: center;
+          padding-left: 10vw;
+          padding-right: 10vw
         }
       }
       
