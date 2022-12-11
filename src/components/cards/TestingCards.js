@@ -8,6 +8,7 @@ import {
   watering,
 } from "../../assets/images";
 import { CustomButton } from "../button";
+import { useNavigate } from "react-router";
 
 const TestCardContainer = styled.div`
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
@@ -60,7 +61,12 @@ const TestCardContainer = styled.div`
     }
   }
 `;
-const TestingCards = ({ type }) => {
+const TestingCards = ({ type, url }) => {
+  const navigate = useNavigate();
+
+  const route_to = (url) => {
+    navigate("crop_recomendation");
+  };
   return (
     <TestCardContainer type={type}>
       <div className="card-shape">
@@ -68,7 +74,14 @@ const TestingCards = ({ type }) => {
           <h2>{type}</h2>
         </div>
         <div className="button-container">
-          <CustomButton type="custom" width={"200px"} height="45px">
+          <CustomButton
+            type="custom"
+            width={"200px"}
+            height="45px"
+            onClick={() => {
+              route_to(url);
+            }}
+          >
             Predict
           </CustomButton>
         </div>
