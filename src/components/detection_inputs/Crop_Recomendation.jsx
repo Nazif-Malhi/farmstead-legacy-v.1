@@ -68,9 +68,51 @@ const Crop_Recomendation = () => {
             </Select>
           </FormControl>
         </Row>
-        <Row>
+        <Row className="row-rb">
+          <FormControl sx={{ m: 1, minWidth: 120 }} size="small">
+            <InputLabel id="demo-select-small">Soil Type</InputLabel>
+            <Select
+              labelId="demo-select-small"
+              id="demo-select-small"
+              value={model}
+              label="Type"
+              onChange={(e) => setModel(e.target.value)}
+            >
+              <MenuItem value="">
+                <em>None</em>
+              </MenuItem>
+              <MenuItem value={"Simple"}>Simple</MenuItem>
+              <MenuItem value={"Advance"}>Advance</MenuItem>
+            </Select>
+          </FormControl>
+        </Row>
+        <Row className="row-rb">
           <TextField
-            label="Size"
+            label="Temprature"
+            id="outlined-size-small"
+            defaultValue="Small"
+            size="small"
+          />
+        </Row>
+        <Row className="row-rb">
+          <TextField
+            label="Humidity"
+            id="outlined-size-small"
+            defaultValue="Small"
+            size="small"
+          />
+        </Row>
+        <Row className="row-rb">
+          <TextField
+            label="Ph"
+            id="outlined-size-small"
+            defaultValue="Small"
+            size="small"
+          />
+        </Row>
+        <Row className="row-rb">
+          <TextField
+            label="rain"
             id="outlined-size-small"
             defaultValue="Small"
             size="small"
