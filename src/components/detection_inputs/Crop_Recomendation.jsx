@@ -23,6 +23,8 @@ const Input_Card = styled.div`
   background-color: rgba(255, 255, 255, 0.75);
   border-radius: 12px;
   border: 1px solid rgba(209, 213, 219, 0.3);
+  display: flex;
+  align-items: center;
 `;
 
 const Crop_Recomendation = () => {
