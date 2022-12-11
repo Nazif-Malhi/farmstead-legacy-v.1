@@ -16,7 +16,7 @@ const Models = () => {
         />
         <Route path="pest_detection" element={<Pest_Detection />} />
         <Route
-          path="crop_recomendation"
+          path="fertilizer_recomendation"
           element={<Fertilizer_Recomendation />}
         />
       </Route>
