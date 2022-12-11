@@ -2,8 +2,11 @@ import React from "react";
 import styled from "styled-components";
 import { Row, Col } from "react-bootstrap";
 import { blog_shape, lab } from "../../assets";
-import { SlickSlider } from "../carousel";
+// import { SlickSlider } from "../carousel";
+// import SlickCarousel from "../carousel/slick-carousel";
 import Counter from "./Counter";
+import { CarouselWapper } from "../carousel/carousel2";
+import { corn, feildwrap, seed } from "../../assets";
 
 const BlogContainer = styled.div`
   width: 100%;
@@ -40,7 +43,8 @@ const BlogContainer = styled.div`
       }
     }
     .detailed-section {
-      padding: 40px;
+      width:100%;
+      // padding: 40px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -52,6 +56,8 @@ const BlogContainer = styled.div`
         font-style: normal;
         font-weight: 400;
         font-size: 18px;
+        padding-left: 47px;
+        text-align: justify;
       }
     }
   }
@@ -76,6 +82,8 @@ const BlogContainer = styled.div`
       flex-direction: column;
       // justify-content: center;
       h4 {
+        text-transform: uppercase;
+        text-align: justify;
         font-family: "Rubik", sans-serif;
         font-style: normal;
         font-weight: 700;
@@ -98,6 +106,7 @@ const BlogContainer = styled.div`
     );
   }
   .shadow {
+    position: absolute;top:0;left:0;width: 200px;height:200px;opacity:0.4;filter: alpha(opacity = 50)
     box-shadow: none !important;
     position: absolute;
     top: 500%;
@@ -109,6 +118,23 @@ const BlogContainer = styled.div`
   }
 `;
 
+const blogDetails=[
+  {
+    title:"Corn",
+    img:corn,
+    para:"Nitrogen (N) is often the most limiting nutrient for corn production and is frequently applied in excess and far in advance of corn requirements"
+  },
+  {
+    title:"Seed's",
+    img:seed,
+    para:"Seeds are not only the carriers of the DNA of a newly formed plant generation; they also form complex associations with micro-organisms."
+  },
+  {
+    title:"Watering",
+    img:feildwrap,
+    para:"Water content plays a crucial role in seed development, particularly at the seed sowing stage, and it ensures good seed germination seed drill consisted of a wheat."
+  }
+]
 const Blog = () => {
   return (
     <BlogContainer>
@@ -129,7 +155,9 @@ const Blog = () => {
       <Row className="row-blog">
         <Col className="main-section">{/* <img src={lab} alt="lab" /> */}</Col>
         <Col className="blog-section">
-          <SlickSlider />
+          {/* <SlickSlider /> */}
+          {/* <SlickCarousel /> */}
+          <CarouselWapper  blogDetails={blogDetails} isBlog={true} />
           <h4>
             Research improves services and treatments not just for you but also
             for future generations.{" "}

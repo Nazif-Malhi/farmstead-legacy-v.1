@@ -8,10 +8,11 @@ import TestHeading from "../layouts/TestHeading";
 import TestingArea from "../layouts/TestingArea";
 import Work from "../layouts/Work";
 import NavbarHeader2 from "../navbar/NavbarHeader2";
-
+import Footer from "../layouts/Footer";
 
 const MockUpContainer = styled.div`
   background: #eefbf2;
+ 
 `;
 
 
@@ -27,7 +28,8 @@ const MockUp = () => {
       <Focusing />
       <Work />
       <Blog />
-      <Aboutus />
+      <Aboutus/>
+      <Footer/>
     </MockUpContainer>
   );
 };

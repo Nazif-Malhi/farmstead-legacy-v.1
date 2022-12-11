@@ -12,7 +12,7 @@ const CircularContainer = styled.div`
   background: #eefbf2;
   box-shadow: 13px 13px 26px #aeb7b1, -13px -13px 26px #ffffff;
   border-radius: 50%;
-  
+  left: 48%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -23,7 +23,7 @@ const CircularContainer = styled.div`
     padding: 5px 10px;
     border-radius: 7px;
     color: ${(props) => props.clr};
-    transform: rotate(calc(360deg / -6 * (${(props) => props.num}))) ;
+    transform: rotate(calc(360deg / -6 * (${(props) => props.num})));
     top: 0;
     background: #eefbf2;
     position: absolute;

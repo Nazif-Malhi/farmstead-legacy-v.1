@@ -4,8 +4,8 @@ import { about_bg, about_bk, sun } from "../../assets/images";
 
 const AboutusContainer = styled.div`
   width: 100%;
-  height: 150vh;
-  margin-top: 150px;
+  height: 92vh;
+  margin-top: 100px;
   background: url(${about_bg});
   background-size: contain;
   background-repeat: no-repeat;
@@ -14,7 +14,7 @@ const AboutusContainer = styled.div`
   display: flex;
   text-align: center;
   .about-text {
-    margin-top: 60px;
+    margin-top: 0px;
     h5 {
       color: #209e2e;
     }
@@ -36,7 +36,11 @@ const AboutusContainer = styled.div`
   }
   .about-bg {
     position: absolute;
-    margin-top: 270px;
+    margin-top: 110px;
+    opacity:.5;
+  }
+  .fLIjwV{
+    margin-top: 100px !important;
   }
 `;
 const Aboutus = () => {

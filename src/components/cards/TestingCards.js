@@ -24,6 +24,10 @@ const TestCardContainer = styled.div`
       ? watering
       : props.type === "Fertilizer Prediction"
       ? fertilizer
+      :props.type === "Crops Diseases Detection"
+      ? fertilizer
+      :props.type === "Pest Detection"
+      ? fertilizer
       : null});
   background-size: cover;
   background-repeat: no-repeat;

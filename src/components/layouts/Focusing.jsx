@@ -81,7 +81,15 @@ const FocusContainer = styled.div`
 
 
 const Focusing = () => {
+  // style={{transform: rotate(calc(360deg / 6 * (0))),transform: translateX(295px)
   
+  // style={{transform: 'rotate(calc(310deg / 6 * (1))) translateX("280px")'}}
+  // style={{transform: 'rotate(calc(360deg / 7 * (2))) translateX("215px")'}}
+  // style={{transform: 'rotate(calc(360deg / 6 * (3))) translateX("165px")'}}
+  // style={{transform: 'rotate(calc(370deg / 6 * (4))) translateX("167px")'}}
+  // style={{transform: 'rotate(calc(378deg / 6 * (5))) translateX("235px")'}}
+
+
   return (
     <FocusContainer>
       <h1>Our Vision</h1>
@@ -98,20 +106,24 @@ const Focusing = () => {
         img={zero_hunger}
         clr={"#04fc43"}
         head={"Zero Hunger"}
+        
       />
       <Circular
         num={3}
         img={infrastructure}
         clr={"#007bff"}
         head={"Infrastructure"}
+        
       />
-      <Circular num={4} img={cities} clr={"#aeff00"} head={"Inovation"} />
+      <Circular num={4} img={cities} clr={"#aeff00"} head={"Inovation"}
+       />
       <Circular
         num={5}
         img={consumtion_production}
         clr={"#04fc43"}
         head={"Consumption"}
         className='consumption'
+        
       />
       {/* <div className="border"></div> */}
       <div className="style-wrapper">

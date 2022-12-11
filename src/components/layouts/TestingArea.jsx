@@ -1,7 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import { TestingCards } from "../cards";
+// import { TestingCards } from "../cards";
 import { sunnylandscape } from "../../assets/images";
+import { CarouselWapper } from "../carousel/carousel2";
+
 
 const TestingContainer = styled.div`
   width: 100%;
@@ -17,11 +19,16 @@ const TestingContainer = styled.div`
 `;
 
 const TestingArea = () => {
+  const cards=["Crops Prediction", "Watering Cycle's","Fertilizer Prediction","Crops Diseases Detection", "Pest Detection","Fertilizer Prediction" ];
   return (
     <TestingContainer>
-      <TestingCards type={"Crops Prediction"} />
+      {/* <TestingCards type={"Crops Prediction"} />
       <TestingCards type={"Watering Cycle's"} />
-      <TestingCards type={"Fertilizer Prediction"} />
+      <TestingCards type={"Fertilizer Prediction"} /> */}
+      <CarouselWapper  cards={cards} />
+          
+      
+
     </TestingContainer>
   );
 };

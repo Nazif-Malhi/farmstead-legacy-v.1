@@ -3,17 +3,17 @@ import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-// import NavDropdown from 'react-bootstrap/NavDropdown';
+import NavDropdown from 'react-bootstrap/NavDropdown';
 import styled from "styled-components";
 import {useState} from 'react';
 import './NavbarHeader2.css';
+// import { Logo } from '../../assets';
 
 
 
 const NavbarContainer = styled.div`
-     
-  
-  .active{
+    border-radius:none;
+    .active{
     color:#209e2e  !important;
   }
   .nav-link:hover {
@@ -39,7 +39,10 @@ function NavbarHeader2() {
     <NavbarContainer >
       <Navbar  className={stickyNavbar ? 'navbar navbarSticky' : 'navbarFloat' } expand="lg">
           <Container fluid>
-            <Navbar.Brand href="#">FarmStead</Navbar.Brand>
+            <Navbar.Brand href="#">
+              {/* FarmStead */}
+              {/* <img src={Logo} /> */}
+            </Navbar.Brand>
             <Navbar.Toggle aria-controls="navbarScroll" />
             <Navbar.Collapse id="navbarScroll">
               <Nav
@@ -49,16 +52,16 @@ function NavbarHeader2() {
               >
                 <Nav.Link href="#home">Home</Nav.Link>
                 <Nav.Link href="#about">About</Nav.Link>
-                <Nav.Link href="#pages">Pages</Nav.Link>
+                {/* <Nav.Link href="#pages">Pages</Nav.Link> */}
                 <Nav.Link href="#services">Services</Nav.Link>
                 <Nav.Link href="#shop">Shop</Nav.Link>
-                {/* <NavDropdown title="Pages" id="navbarScrollingDropdown"  >
-                  <NavDropdown.Item href="#page1">Page 1</NavDropdown.Item>
+                <NavDropdown title="Pages" id="navbarScrollingDropdown"  >
+                  <NavDropdown.Item href="pest-detection">Pest Detection</NavDropdown.Item>
                   <NavDropdown.Item href="#page2">Page 2</NavDropdown.Item>
                   <NavDropdown.Divider />
                   <NavDropdown.Item href="#page3">Page 3</NavDropdown.Item>
                 </NavDropdown>
-                <NavDropdown title="Services" id="navbarScrollingDropdown"  >
+                {/* <NavDropdown title="Services" id="navbarScrollingDropdown"  >
                   <NavDropdown.Item href="#service1">Service 1</NavDropdown.Item>
                 </NavDropdown>
                 <NavDropdown title="Shop" id="navbarScrollingDropdown">

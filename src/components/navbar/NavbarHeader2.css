@@ -1,12 +1,13 @@
 
 .navbar{
    font-family: 'Rubik',sans-serif;
+   /* border-radius: 8px; */
 }
 .navbarSticky{
     position: fixed !important;
     z-index: 9999;
     top: 0px; 
-    
+    border-radius: none;
     height: 69px;
     width: 100%;
     background-color: white;
