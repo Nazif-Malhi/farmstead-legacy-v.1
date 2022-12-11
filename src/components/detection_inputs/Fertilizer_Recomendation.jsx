@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { labortarty_test } from "../../assets";
+import {
+  fertilizer_crops,
+  fertilizer_soil,
+  labortarty_test,
+} from "../../assets";
 import Box from "@mui/material/Box";
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
@@ -83,8 +87,13 @@ const Fertilizer_Recomendation = () => {
               <MenuItem value="">
                 <em>None</em>
               </MenuItem>
-              <MenuItem value={"Simple"}>Simple</MenuItem>
-              <MenuItem value={"Advance"}>Advance</MenuItem>
+              {fertilizer_soil.map((val, id) => {
+                return (
+                  <MenuItem value={val} key={id}>
+                    {val}
+                  </MenuItem>
+                );
+              })}
             </Select>
           </FormControl>
         </Row>
@@ -101,8 +110,13 @@ const Fertilizer_Recomendation = () => {
               <MenuItem value="">
                 <em>None</em>
               </MenuItem>
-              <MenuItem value={"Simple"}>Simple</MenuItem>
-              <MenuItem value={"Advance"}>Advance</MenuItem>
+              {fertilizer_crops.map((val, id) => {
+                return (
+                  <MenuItem value={val} key={id}>
+                    {val}
+                  </MenuItem>
+                );
+              })}
             </Select>
           </FormControl>
         </Row>
