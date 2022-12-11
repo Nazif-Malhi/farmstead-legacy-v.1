@@ -24,20 +24,21 @@ const NavbarContainer = styled.div`
 
 function NavbarHeader2() {
 
-  const [stickyNavbar, setStickyNavbar] = useState(false);
-  const changeNavbar = () =>{
-     if(window.scrollY >= 100){
-       setStickyNavbar(true);
-     }
-     else{
-       setStickyNavbar(false);
-     }
-  };
-  window.addEventListener('scroll', changeNavbar);
+//   const [stickyNavbar, setStickyNavbar] = useState(false);
+//   const changeNavbar = () =>{
+//      if(window.scrollY >= 100){
+//        setStickyNavbar(true);
+//      }
+//      else{
+//        setStickyNavbar(false);
+//      }
+//   };
+//   window.addEventListener('scroll', changeNavbar);
 
   return (
     <NavbarContainer >
-      <Navbar  className={stickyNavbar ? 'navbar navbarSticky' : 'navbarFloat' } expand="lg">
+      {/* <Navbar  className={stickyNavbar ? 'navbar navbarSticky' : 'navbarFloat' } expand="lg"> */}
+      <Navbar  className='navbar navbarSticky' expand="lg">
           <Container fluid>
             <Navbar.Brand href="#">
               {/* FarmStead */}
