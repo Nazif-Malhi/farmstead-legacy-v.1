@@ -17,16 +17,10 @@ const TestingContainer = styled.div`
 const TestingArea = () => {
   return (
     <TestingContainer>
-      <TestingCards type={"Crops Prediction"} />
-      <TestingCards
-        type={"Watering Cycle's"}
-        url="/models/crop_disease_detection"
-      />
-      <TestingCards
-        type={"Fertilizer Prediction"}
-        url="/models/pest_detection"
-      />
-      <TestingCards type={"Pest Detection"} url="/models/crop_recomendation" />
+      <TestingCards type={"Crops Prediction"} url={"crop_recomendation"} />
+      <TestingCards type={"Watering Cycle's"} url="crop_disease_detection" />
+      <TestingCards type={"Fertilizer Prediction"} url="pest_detection" />
+      <TestingCards type={"Pest Detection"} url="crop_recomendation" />
     </TestingContainer>
   );
 };
