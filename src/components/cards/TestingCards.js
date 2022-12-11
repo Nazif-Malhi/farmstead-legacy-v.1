@@ -6,6 +6,9 @@ import {
   cultivate,
   fertilizer,
   watering,
+  pest1,
+  pest2,
+  cropDisease,
 } from "../../assets/images";
 import { CustomButton } from "../button";
 import { useNavigate } from "react-router";
@@ -25,7 +28,10 @@ const TestCardContainer = styled.div`
       ? watering
       : props.type === "Fertilizer Prediction"
       ? fertilizer
-      : null});
+      : props.type === "Pest's Detection"
+      ? pest1
+      : props.type === "Crops Diseases Detection"
+      ? cropDisease : null});
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;

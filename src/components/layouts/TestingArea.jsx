@@ -18,9 +18,9 @@ const TestingArea = () => {
   return (
     <TestingContainer>
       <TestingCards type={"Crops Prediction"} url={"crop_recomendation"} />
-      <TestingCards type={"Watering Cycle's"} url="crop_disease_detection" />
-      <TestingCards type={"Fertilizer Prediction"} url="pest_detection" />
-      <TestingCards type={"Pest Detection"} url="crop_recomendation" />
+      <TestingCards type={"Crops Diseases Detection"} url="crop_disease_detection" />
+      <TestingCards type={"Fertilizer Prediction"} url="fertilizer_recomendation" />
+      <TestingCards type={"Pest's Detection"} url="pest_detection" />
     </TestingContainer>
   );
 };
