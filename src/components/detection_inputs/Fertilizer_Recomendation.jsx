@@ -26,7 +26,7 @@ const BackContainer = styled.div`
 
 const Input_Card = styled.div`
   width: 40%;
-  height: 70%;
+  height: auto;
   border-radius: 7px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   backdrop-filter: blur(16px) saturate(180%);
@@ -37,15 +37,28 @@ const Input_Card = styled.div`
   display: flex;
   align-items:center: center;
   flex-direction: column;
-  .row-rb{
-    width:100%;
-padding:0px 30px;
+  
+  .row-rb {
+    width: 100%;
+    padding: 0px 30px;
+    margin:8px ;
+  }
+  .row-rb *{
+    margin:1px;
   }
 `;
 
 const Fertilizer_Recomendation = () => {
   const [model, setModel] = useState("");
+  const [temperature, setTemperature]=useState(0);
+  const [humidity, setHumidity]=useState(0);
+  const [moisture, setMoisture]=useState(0);
+  const [nitrogen, setNitrogen]=useState(0);
+  const [phosphorus, setPhosphorus]=useState(0);
+  const [potassium, setPotassium]=useState(0);
 
+
+  
   return (
     <BackContainer>
       <Input_Card>
@@ -54,24 +67,27 @@ const Fertilizer_Recomendation = () => {
           <TextField
             label="Temprature"
             id="outlined-size-small"
-            defaultValue="Small"
+            defaultValue={temperature}
             size="small"
+            onChange={e=>setTemperature(e.target.value)}
           />
         </Row>
         <Row className="row-rb">
           <TextField
             label="Humidity"
             id="outlined-size-small"
-            defaultValue="Small"
+            defaultValue={humidity}
             size="small"
+            onChange={e=>setHumidity(e.target.value)}
           />
         </Row>
         <Row className="row-rb">
           <TextField
             label="Moisture"
             id="outlined-size-small"
-            defaultValue="Small"
+            defaultValue={moisture}
             size="small"
+            onChange={e=>setMoisture(e.target.value)}
           />
         </Row>
         <Row className="row-rb">
@@ -124,24 +140,27 @@ const Fertilizer_Recomendation = () => {
           <TextField
             label="Nitrogen"
             id="outlined-size-small"
-            defaultValue="Small"
+            defaultValue={nitrogen}
             size="small"
+            onChange={e=>setNitrogen(e.target.value)}
           />
         </Row>
         <Row className="row-rb">
           <TextField
             label="Phosphorus"
             id="outlined-size-small"
-            defaultValue="Small"
+            defaultValue={phosphorus}
             size="small"
+            onChange={e=>setPhosphorus(e.target.value)}
           />
         </Row>
         <Row className="row-rb">
           <TextField
             label="Potassium"
             id="outlined-size-small"
-            defaultValue="Small"
+            defaultValue={potassium}
             size="small"
+            onChange={e=>setPotassium(e.target.value)}
           />
         </Row>
       </Input_Card>

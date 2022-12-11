@@ -27,7 +27,7 @@ const BackContainer = styled.div`
 
 const Input_Card = styled.div`
   width: 40%;
-  height: 70%;
+  height: auto;
   border-radius: 7px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   backdrop-filter: blur(16px) saturate(180%);
@@ -44,11 +44,23 @@ const Input_Card = styled.div`
   .row-rb {
     width: 100%;
     padding: 0px 30px;
+    margin:8px ;
+  }
+  .row-rb *{
+    margin:1px;
   }
 `;
 
 const Crop_Recomendation = () => {
   const [model, setModel] = useState("");
+
+  const [temperature, setTemperature]=useState(0);
+  const [humidity, setHumidity]=useState(0);
+  const [ph, setPh]=useState(0);
+  const [nitrogen, setNitrogen]=useState(0);
+  const [phosphorus, setPhosphorus]=useState(0);
+  const [potassium, setPotassium]=useState(0);
+  const [rain, setRain]=useState(0);
 
   return (
     <BackContainer>
@@ -107,60 +119,74 @@ const Crop_Recomendation = () => {
         </Row>
         <Row className="row-rb">
           <TextField
+            fullWidth
             label="Temprature"
             id="outlined-size-small"
-            defaultValue="Small"
+            defaultValue={temperature}
             size="small"
+            onChange={e=>setTemperature(e.target.value)}
           />
         </Row>
         <Row className="row-rb">
           <TextField
+            fullWidth
             label="Humidity"
             id="outlined-size-small"
-            defaultValue="Small"
+            defaultValue={humidity}
             size="small"
+            onChange={e=>setHumidity(e.target.value)}
           />
         </Row>
         <Row className="row-rb">
           <TextField
+            fullWidth
             label="Ph"
             id="outlined-size-small"
-            defaultValue="Small"
+            defaultValue={ph}
             size="small"
+            onChange={e=>setPh(e.target.value)}
           />
         </Row>
         <Row className="row-rb">
           <TextField
+            fullWidth
             label="rain"
             id="outlined-size-small"
-            defaultValue="Small"
+            defaultValue={rain}
             size="small"
+            onChange={e=>setRain(e.target.value)}
           />
         </Row>
         {model === "Advance" ? (
           <>
             <Row className="row-rb">
               <TextField
+                fullWidth
                 label="Nitrogen"
                 id="outlined-size-small"
-                defaultValue="Small"
+                defaultValue={nitrogen}
                 size="small"
+                onChange={e=>setNitrogen(e.target.value)}
               />
             </Row>
             <Row className="row-rb">
               <TextField
+                fullWidth
                 label="Phosphorus"
                 id="outlined-size-small"
-                defaultValue="Small"
+                defaultValue={phosphorus}
                 size="small"
+                onChange={e=>setPhosphorus(e.target.value)}
               />
             </Row>
             <Row className="row-rb">
               <TextField
+                fullWidth
                 label="Potassium"
                 id="outlined-size-small"
-                defaultValue="Small"
+                defaultValue={potassium}
                 size="small"
+                onChange={e=>setPotassium(e.target.value)}
               />
             </Row>
           </>
