@@ -8,7 +8,7 @@ function App() {
     <Routes>
       <Route path="/" element={<MockUp />} />
       <Route path="/detction/*">
-        <Route path="crop_recomendation"
+        <Route path="crop_recomendation" />
       </Route>
     </Routes>
   );
