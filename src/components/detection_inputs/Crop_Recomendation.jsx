@@ -118,6 +118,34 @@ const Crop_Recomendation = () => {
             size="small"
           />
         </Row>
+        {model === "Advance" ? (
+          <>
+            <Row className="row-rb">
+              <TextField
+                label="Nitrogen"
+                id="outlined-size-small"
+                defaultValue="Small"
+                size="small"
+              />
+            </Row>
+            <Row className="row-rb">
+              <TextField
+                label="Phosphorus"
+                id="outlined-size-small"
+                defaultValue="Small"
+                size="small"
+              />
+            </Row>
+            <Row className="row-rb">
+              <TextField
+                label="Potassium"
+                id="outlined-size-small"
+                defaultValue="Small"
+                size="small"
+              />
+            </Row>
+          </>
+        ) : null}
       </Input_Card>
     </BackContainer>
   );
