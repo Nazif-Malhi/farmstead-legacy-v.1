@@ -30,11 +30,14 @@ const Input_Card = styled.div`
   border-radius: 12px;
   border: 1px solid rgba(209, 213, 219, 0.3);
   display: flex;
-  align-items:center: center;
+  align-items: center;
   flex-direction: column;
-  .row-rb{
-    width:100%;
-padding:0px 30px;
+  h4 {
+    margin-top: 20px;
+  }
+  .row-rb {
+    width: 100%;
+    padding: 0px 30px;
   }
 `;
 
@@ -46,20 +49,30 @@ const Crop_Recomendation = () => {
       <Input_Card>
         <h4>Please Fill Form</h4>
         <Row className="row-rb">
-          <FormControl fullWidth>
-            <InputLabel id="demo-simple-select-label">Type</InputLabel>
+          <FormControl sx={{ m: 1, minWidth: 120 }} size="small">
+            <InputLabel id="demo-select-small">Type</InputLabel>
             <Select
-              labelId="demo-simple-select-label"
-              id="demo-simple-select"
+              labelId="demo-select-small"
+              id="demo-select-small"
               value={model}
-              label="Age"
+              label="Type"
               onChange={(e) => setModel(e.target.value)}
-              size="small"
             >
+              <MenuItem value="">
+                <em>None</em>
+              </MenuItem>
               <MenuItem value={"Simple"}>Simple</MenuItem>
               <MenuItem value={"Advance"}>Advance</MenuItem>
             </Select>
           </FormControl>
+        </Row>
+        <Row>
+          <TextField
+            label="Size"
+            id="outlined-size-small"
+            defaultValue="Small"
+            size="small"
+          />
         </Row>
       </Input_Card>
     </BackContainer>
