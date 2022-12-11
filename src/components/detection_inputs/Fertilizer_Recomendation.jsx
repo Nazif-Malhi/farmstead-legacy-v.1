@@ -7,6 +7,7 @@ import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
 import { Row } from "react-bootstrap";
+import TextField from "@mui/material/TextField";
 
 const BackContainer = styled.div`
   width: 100%;
@@ -46,20 +47,88 @@ const Fertilizer_Recomendation = () => {
       <Input_Card>
         <h4>Please Fill Form</h4>
         <Row className="row-rb">
-          <FormControl fullWidth>
-            <InputLabel id="demo-simple-select-label">Type</InputLabel>
+          <TextField
+            label="Temprature"
+            id="outlined-size-small"
+            defaultValue="Small"
+            size="small"
+          />
+        </Row>
+        <Row className="row-rb">
+          <TextField
+            label="Humidity"
+            id="outlined-size-small"
+            defaultValue="Small"
+            size="small"
+          />
+        </Row>
+        <Row className="row-rb">
+          <TextField
+            label="Moisture"
+            id="outlined-size-small"
+            defaultValue="Small"
+            size="small"
+          />
+        </Row>
+        <Row className="row-rb">
+          <FormControl sx={{ m: 1, minWidth: 120 }} size="small">
+            <InputLabel id="demo-select-small">Soil Type</InputLabel>
             <Select
-              labelId="demo-simple-select-label"
-              id="demo-simple-select"
+              labelId="demo-select-small"
+              id="demo-select-small"
               value={model}
-              label="Age"
+              label="Soil Type"
               onChange={(e) => setModel(e.target.value)}
-              size="small"
             >
+              <MenuItem value="">
+                <em>None</em>
+              </MenuItem>
               <MenuItem value={"Simple"}>Simple</MenuItem>
               <MenuItem value={"Advance"}>Advance</MenuItem>
             </Select>
           </FormControl>
+        </Row>
+        <Row className="row-rb">
+          <FormControl sx={{ m: 1, minWidth: 120 }} size="small">
+            <InputLabel id="demo-select-small">Crop Type</InputLabel>
+            <Select
+              labelId="demo-select-small"
+              id="demo-select-small"
+              value={model}
+              label="Crop Type"
+              onChange={(e) => setModel(e.target.value)}
+            >
+              <MenuItem value="">
+                <em>None</em>
+              </MenuItem>
+              <MenuItem value={"Simple"}>Simple</MenuItem>
+              <MenuItem value={"Advance"}>Advance</MenuItem>
+            </Select>
+          </FormControl>
+        </Row>
+        <Row className="row-rb">
+          <TextField
+            label="Nitrogen"
+            id="outlined-size-small"
+            defaultValue="Small"
+            size="small"
+          />
+        </Row>
+        <Row className="row-rb">
+          <TextField
+            label="Phosphorus"
+            id="outlined-size-small"
+            defaultValue="Small"
+            size="small"
+          />
+        </Row>
+        <Row className="row-rb">
+          <TextField
+            label="Potassium"
+            id="outlined-size-small"
+            defaultValue="Small"
+            size="small"
+          />
         </Row>
       </Input_Card>
     </BackContainer>

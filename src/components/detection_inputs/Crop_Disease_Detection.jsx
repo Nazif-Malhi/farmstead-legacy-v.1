@@ -1,12 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import styled from "styled-components";
 import { labortarty_test } from "../../assets";
-import Box from "@mui/material/Box";
-import InputLabel from "@mui/material/InputLabel";
-import MenuItem from "@mui/material/MenuItem";
-import FormControl from "@mui/material/FormControl";
-import Select, { SelectChangeEvent } from "@mui/material/Select";
-import { Row } from "react-bootstrap";
+import { Row, Button } from "react-bootstrap";
+import { AiOutlineUpload } from "react-icons/ai";
 
 const BackContainer = styled.div`
   width: 100%;
@@ -38,28 +34,84 @@ padding:0px 30px;
   }
 `;
 
+const Upload = styled.div`
+  border-radius: 7px;
+  width: 100%;
+  height: 220px;
+  border: 2px dashed #a2abb6;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+  :hover {
+    cursor: pointer;
+    border: 2px dashed #3b4f66;
+    color: #3b4f66;
+    h6 {
+      color: #3b4f66;
+    }
+  }
+  p {
+    color: #a2abb6;
+  }
+  h6 {
+    color: #a2abb6;
+  }
+  .buttonadd {
+    width: 40%;
+  }
+`;
+
 const Crop_Disease_Detection = () => {
-  const [model, setModel] = useState("");
+  const [file, set_File] = useState(null);
+  const inputRef = useRef(null);
+
+  const handleDragOver = (event) => {
+    event.preventDefault();
+  };
+  const handleDrop = (event) => {
+    event.preventDefault();
+    set_File(event.dataTransfer.files[0]);
+  };
+
+  const onButtonClick = () => {
+    inputRef.current.click();
+  };
 
   return (
     <BackContainer>
       <Input_Card>
-        <h4>Please Fill Form</h4>
-        <Row className="row-rb">
-          <FormControl fullWidth>
-            <InputLabel id="demo-simple-select-label">Type</InputLabel>
-            <Select
-              labelId="demo-simple-select-label"
-              id="demo-simple-select"
-              value={model}
-              label="Age"
-              onChange={(e) => setModel(e.target.value)}
-              size="small"
+        <h4>Upload Image</h4>
+        {!file ? (
+          <Upload onDragOver={handleDragOver} onDrop={handleDrop}>
+            <AiOutlineUpload style={{ fontSize: "5.7rem", color: "a2abb6" }} />
+
+            <h6>Drag & Drop here</h6>
+            <input
+              type={"file"}
+              onChange={(e) => {
+                set_File(e.target.files[0]);
+              }}
+              hidden
+              multiple
+              ref={inputRef}
+            />
+          </Upload>
+        ) : (
+          <Upload>
+            <h6>{file.name}</h6>
+          </Upload>
+        )}
+        <Row style={{ textAlign: "center" }}>
+          <div className="buttonadd">
+            <Button
+              style={{ background: "#a600a0", border: "none" }}
+              onClick={onButtonClick}
             >
-              <MenuItem value={"Simple"}>Simple</MenuItem>
-              <MenuItem value={"Advance"}>Advance</MenuItem>
-            </Select>
-          </FormControl>
+              Click to upload
+            </Button>
+          </div>
         </Row>
       </Input_Card>
     </BackContainer>
