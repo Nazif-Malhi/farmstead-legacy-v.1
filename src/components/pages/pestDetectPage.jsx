@@ -17,7 +17,7 @@ const PestDetectionPage=()=> {
                 </Container> */}
                 <h2>Add Image:</h2>
                 <input type="file" onChange={handleChange} />
-                <img alt='sample' src={file} />
+                <img alt='sample' src={file}  />
   
             </div>
         </>
