@@ -1,6 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { labortarty_test } from "../../assets";
+import Box from "@mui/material/Box";
+import InputLabel from "@mui/material/InputLabel";
+import MenuItem from "@mui/material/MenuItem";
+import FormControl from "@mui/material/FormControl";
+import Select, { SelectChangeEvent } from "@mui/material/Select";
+import { Row } from "react-bootstrap";
 
 const BackContainer = styled.div`
   width: 100%;
@@ -24,14 +30,37 @@ const Input_Card = styled.div`
   border-radius: 12px;
   border: 1px solid rgba(209, 213, 219, 0.3);
   display: flex;
-  align-items: center;
+  align-items:center: center;
+  flex-direction: column;
+  .row-rb{
+    width:100%;
+padding:0px 30px;
+  }
 `;
 
 const Crop_Recomendation = () => {
+  const [model, setModel] = useState("");
+
   return (
     <BackContainer>
       <Input_Card>
         <h4>Please Fill Form</h4>
+        <Row className="row-rb">
+          <FormControl fullWidth>
+            <InputLabel id="demo-simple-select-label">Type</InputLabel>
+            <Select
+              labelId="demo-simple-select-label"
+              id="demo-simple-select"
+              value={model}
+              label="Age"
+              onChange={(e) => setModel(e.target.value)}
+              size="small"
+            >
+              <MenuItem value={"Simple"}>Simple</MenuItem>
+              <MenuItem value={"Advance"}>Advance</MenuItem>
+            </Select>
+          </FormControl>
+        </Row>
       </Input_Card>
     </BackContainer>
   );
