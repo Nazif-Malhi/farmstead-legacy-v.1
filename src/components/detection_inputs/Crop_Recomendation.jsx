@@ -12,7 +12,7 @@ import FormControl from "@mui/material/FormControl";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
 import TextField from "@mui/material/TextField";
 
-import { Row } from "react-bootstrap";
+import { Row,Button } from "react-bootstrap";
 
 const BackContainer = styled.div`
   width: 100%;
@@ -61,6 +61,21 @@ const Crop_Recomendation = () => {
   const [phosphorus, setPhosphorus]=useState(0);
   const [potassium, setPotassium]=useState(0);
   const [rain, setRain]=useState(0);
+
+
+  const onButtonClick = () => {
+    const list={
+      "temperature":temperature,
+      "humidity":humidity,
+      "ph":ph,
+      "nitrogen":nitrogen,
+      "phosphorus":phosphorus,
+      "potassium":potassium,
+      "rain":rain
+    };
+    return list;
+
+  }
 
   return (
     <BackContainer>
@@ -191,6 +206,17 @@ const Crop_Recomendation = () => {
             </Row>
           </>
         ) : null}
+
+          <Row style={{ textAlign: "center" }}>
+            <div className="buttonadd">
+              <Button
+                style={{ background: "#a600a0", border: "none" }}
+                onClick={onButtonClick}
+              >
+                Click to upload
+              </Button>
+            </div>
+          </Row>
       </Input_Card>
     </BackContainer>
   );
