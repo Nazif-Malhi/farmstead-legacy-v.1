@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { labortarty_test } from "../../assets";
+import {
+  crop_recomendation1,
+  crop_recomendation2,
+  labortarty_test,
+} from "../../assets";
 import Box from "@mui/material/Box";
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
@@ -93,8 +97,23 @@ const Crop_Recomendation = () => {
               <MenuItem value="">
                 <em>None</em>
               </MenuItem>
-              <MenuItem value={"Simple"}>Simple</MenuItem>
-              <MenuItem value={"Advance"}>Advance</MenuItem>
+              {model === "Advance"
+                ? crop_recomendation2.map((val, id) => {
+                    return (
+                      <MenuItem value={val} key={id}>
+                        {val}
+                      </MenuItem>
+                    );
+                  })
+                : model === "Simple"
+                ? crop_recomendation1.map((val, id) => {
+                    return (
+                      <MenuItem value={val} key={id}>
+                        {val}
+                      </MenuItem>
+                    );
+                  })
+                : null}
             </Select>
           </FormControl>
         </Row>
