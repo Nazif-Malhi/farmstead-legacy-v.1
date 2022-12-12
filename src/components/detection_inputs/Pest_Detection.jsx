@@ -87,7 +87,7 @@ const Pest_Detectionn = () => {
       <Input_Card>
         <h4>Upload Image</h4>
         {!file ? (
-          <Upload onDragOver={handleDragOver} onDrop={handleDrop}>
+          <Upload onDragOver={handleDragOver} onDrop={handleDrop} style={{marginBottom:"20px"}}>
             <AiOutlineUpload style={{ fontSize: "5.7rem", color: "a2abb6" }} />
 
             <h6>Drag & Drop here</h6>

@@ -63,8 +63,9 @@ const Upload = styled.div`
   .buttonadd {
     width: 40%;
     padding: 23px;
-    padding: 15px;
+    padding: 36px !important;
   }
+ 
 `;
 
 const Crop_Disease_Detection = () => {
@@ -88,7 +89,7 @@ const Crop_Disease_Detection = () => {
       <Input_Card>
         <h4>Upload Image</h4>
         {!file ? (
-          <Upload onDragOver={handleDragOver} onDrop={handleDrop}>
+          <Upload onDragOver={handleDragOver} onDrop={handleDrop} style={{marginBottom:"20px"}}>
             <AiOutlineUpload style={{ fontSize: "5.7rem", color: "a2abb6" }} />
 
             <h6>Drag & Drop here</h6>
