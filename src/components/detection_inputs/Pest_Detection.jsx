@@ -18,6 +18,7 @@ const BackContainer = styled.div`
 const Input_Card = styled.div`
   width: 40%;
   height: 70%;
+  padding: 22px;
   border-radius: 7px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   backdrop-filter: blur(16px) saturate(180%);
@@ -60,6 +61,8 @@ const Upload = styled.div`
   }
   .buttonadd {
     width: 40%;
+    padding: 23px;
+    padding: 15px;
   }
 `;
 
