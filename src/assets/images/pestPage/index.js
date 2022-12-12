@@ -1,0 +1,1 @@
+export { default as pestback } from "./pestback.jpg";

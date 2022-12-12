@@ -7,7 +7,7 @@ import Home from "../layouts/Home";
 import TestHeading from "../layouts/TestHeading";
 import TestingArea from "../layouts/TestingArea";
 import Work from "../layouts/Work";
-import NavbarHeader2 from "../navbar/NavbarHeader2";
+// import NavbarHeader2 from "../navbar/NavbarHeader2";
 import Footer from "../layouts/Footer";
 
 const MockUpContainer = styled.div`
@@ -21,7 +21,7 @@ const MockUp = () => {
 
   return (
     <MockUpContainer>
-      <NavbarHeader2  />
+      {/* <NavbarHeader2  /> */}
       <Home />
       <TestHeading />
       <TestingArea />
@@ -29,7 +29,7 @@ const MockUp = () => {
       <Work />
       <Blog />
       <Aboutus/>
-      <Footer/>
+      {/* <Footer/> */}
     </MockUpContainer>
   );
 };

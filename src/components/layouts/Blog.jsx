@@ -82,13 +82,15 @@ const BlogContainer = styled.div`
       flex-direction: column;
       // justify-content: center;
       h4 {
-        text-transform: uppercase;
-        text-align: justify;
-        font-family: "Rubik", sans-serif;
-        font-style: normal;
-        font-weight: 700;
-        margin-top: 60px;
-        padding: 20px;
+        text-transform: capitalize;
+    text-align: center;
+    font-family: "Rubik",sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    margin-top: 60px;
+    padding: 20px;
+    width: 500px;
+    margin: auto;
       }
     }
   }

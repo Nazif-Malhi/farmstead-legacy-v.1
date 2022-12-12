@@ -8,7 +8,7 @@ import { FiInstagram} from 'react-icons/fi';
 
 export default function Footer() {
   return (
-    <MDBFooter bgColor='light' className='text-center text-lg-start text-muted' style={{ paddingTop:'1px'}}>
+    <MDBFooter  className='text-center text-lg-start text-muted border-top' style={{ paddingTop:'1px', backgroundColor: '#eefbf2'}}>
       <section className=''>
         <MDBContainer className='text-center text-md-start mt-5'>
           <MDBRow className='mt-3'>
