@@ -18,6 +18,8 @@ const BackContainer = styled.div`
 const Input_Card = styled.div`
   width: 40%;
   height: 70%;
+  text-align: center;
+  padding: 22px;
   border-radius: 7px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   backdrop-filter: blur(16px) saturate(180%);
@@ -60,7 +62,10 @@ const Upload = styled.div`
   }
   .buttonadd {
     width: 40%;
+    padding: 23px;
+    padding: 36px !important;
   }
+ 
 `;
 
 const Crop_Disease_Detection = () => {
@@ -84,7 +89,7 @@ const Crop_Disease_Detection = () => {
       <Input_Card>
         <h4>Upload Image</h4>
         {!file ? (
-          <Upload onDragOver={handleDragOver} onDrop={handleDrop}>
+          <Upload onDragOver={handleDragOver} onDrop={handleDrop} style={{marginBottom:"20px"}}>
             <AiOutlineUpload style={{ fontSize: "5.7rem", color: "a2abb6" }} />
 
             <h6>Drag & Drop here</h6>

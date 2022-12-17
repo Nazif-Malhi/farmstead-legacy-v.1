@@ -12,7 +12,7 @@ import FormControl from "@mui/material/FormControl";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
 import TextField from "@mui/material/TextField";
 
-import { Row } from "react-bootstrap";
+import { Row, Button } from "react-bootstrap";
 import { simple_crop } from "../../apis";
 
 const BackContainer = styled.div`
@@ -64,16 +64,6 @@ const Crop_Recomendation = () => {
   const [potassium, setPotassium] = useState(0);
   const [rain, setRain] = useState(0);
 
-  const handle_click = () => {
-    const payload = {
-      soil_type: crop,
-      temp: temperature,
-      humi: humidity,
-      ph: ph,
-      rain: rain,
-    };
-    console.log(simple_crop(payload));
-  };
   return (
     <BackContainer>
       <Input_Card>
@@ -203,13 +193,6 @@ const Crop_Recomendation = () => {
             </Row>
           </>
         ) : null}
-        <button
-          onClick={() => {
-            handle_click();
-          }}
-        >
-          onClick
-        </button>
       </Input_Card>
     </BackContainer>
   );

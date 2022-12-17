@@ -10,7 +10,7 @@ import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
-import { Row } from "react-bootstrap";
+import { Row, Button } from "react-bootstrap";
 import TextField from "@mui/material/TextField";
 
 const BackContainer = styled.div`
@@ -50,6 +50,7 @@ const Input_Card = styled.div`
 
 const Fertilizer_Recomendation = () => {
   const [model, setModel] = useState("");
+
   const [temperature, setTemperature]=useState(0);
   const [humidity, setHumidity]=useState(0);
   const [moisture, setMoisture]=useState(0);
@@ -57,7 +58,18 @@ const Fertilizer_Recomendation = () => {
   const [phosphorus, setPhosphorus]=useState(0);
   const [potassium, setPotassium]=useState(0);
 
+  const onButtonClick = () => {
+    const list={
+      "temperature":temperature,
+      "humidity":humidity,
+      "moisture":moisture,
+      "nitrogen":nitrogen,
+      "phosphorus":phosphorus,
+      "potassium":potassium
+    };
+    return list;
 
+  }
   
   return (
     <BackContainer>
@@ -163,6 +175,17 @@ const Fertilizer_Recomendation = () => {
             onChange={e=>setPotassium(e.target.value)}
           />
         </Row>
+
+        <Row style={{ textAlign: "center" }}>
+            <div className="buttonadd">
+              <Button
+                style={{ background: "#a600a0", border: "none" }}
+                onClick={onButtonClick}
+              >
+                Click to upload
+              </Button>
+            </div>
+          </Row>
       </Input_Card>
     </BackContainer>
   );
