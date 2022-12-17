@@ -13,6 +13,7 @@ import Select, { SelectChangeEvent } from "@mui/material/Select";
 import TextField from "@mui/material/TextField";
 
 import { Row } from "react-bootstrap";
+import { simple_crop } from "../../apis";
 
 const BackContainer = styled.div`
   width: 100%;
@@ -44,24 +45,35 @@ const Input_Card = styled.div`
   .row-rb {
     width: 100%;
     padding: 0px 30px;
-    margin:8px ;
+    margin: 8px;
   }
-  .row-rb *{
-    margin:1px;
+  .row-rb * {
+    margin: 1px;
   }
 `;
 
 const Crop_Recomendation = () => {
   const [model, setModel] = useState("");
+  const [crop, setCrop] = useState("");
 
-  const [temperature, setTemperature]=useState(0);
-  const [humidity, setHumidity]=useState(0);
-  const [ph, setPh]=useState(0);
-  const [nitrogen, setNitrogen]=useState(0);
-  const [phosphorus, setPhosphorus]=useState(0);
-  const [potassium, setPotassium]=useState(0);
-  const [rain, setRain]=useState(0);
+  const [temperature, setTemperature] = useState(0);
+  const [humidity, setHumidity] = useState(0);
+  const [ph, setPh] = useState(0);
+  const [nitrogen, setNitrogen] = useState(0);
+  const [phosphorus, setPhosphorus] = useState(0);
+  const [potassium, setPotassium] = useState(0);
+  const [rain, setRain] = useState(0);
 
+  const handle_click = () => {
+    const payload = {
+      soil_type: crop,
+      temp: temperature,
+      humi: humidity,
+      ph: ph,
+      rain: rain,
+    };
+    console.log(simple_crop(payload));
+  };
   return (
     <BackContainer>
       <Input_Card>
@@ -90,9 +102,9 @@ const Crop_Recomendation = () => {
             <Select
               labelId="demo-select-small"
               id="demo-select-small"
-              value={model}
+              value={crop}
               label="Type"
-              onChange={(e) => setModel(e.target.value)}
+              onChange={(e) => setCrop(e.target.value)}
             >
               <MenuItem value="">
                 <em>None</em>
@@ -124,7 +136,7 @@ const Crop_Recomendation = () => {
             id="outlined-size-small"
             defaultValue={temperature}
             size="small"
-            onChange={e=>setTemperature(e.target.value)}
+            onChange={(e) => setTemperature(e.target.value)}
           />
         </Row>
         <Row className="row-rb">
@@ -134,7 +146,7 @@ const Crop_Recomendation = () => {
             id="outlined-size-small"
             defaultValue={humidity}
             size="small"
-            onChange={e=>setHumidity(e.target.value)}
+            onChange={(e) => setHumidity(e.target.value)}
           />
         </Row>
         <Row className="row-rb">
@@ -144,7 +156,7 @@ const Crop_Recomendation = () => {
             id="outlined-size-small"
             defaultValue={ph}
             size="small"
-            onChange={e=>setPh(e.target.value)}
+            onChange={(e) => setPh(e.target.value)}
           />
         </Row>
         <Row className="row-rb">
@@ -154,7 +166,7 @@ const Crop_Recomendation = () => {
             id="outlined-size-small"
             defaultValue={rain}
             size="small"
-            onChange={e=>setRain(e.target.value)}
+            onChange={(e) => setRain(e.target.value)}
           />
         </Row>
         {model === "Advance" ? (
@@ -166,7 +178,7 @@ const Crop_Recomendation = () => {
                 id="outlined-size-small"
                 defaultValue={nitrogen}
                 size="small"
-                onChange={e=>setNitrogen(e.target.value)}
+                onChange={(e) => setNitrogen(e.target.value)}
               />
             </Row>
             <Row className="row-rb">
@@ -176,7 +188,7 @@ const Crop_Recomendation = () => {
                 id="outlined-size-small"
                 defaultValue={phosphorus}
                 size="small"
-                onChange={e=>setPhosphorus(e.target.value)}
+                onChange={(e) => setPhosphorus(e.target.value)}
               />
             </Row>
             <Row className="row-rb">
@@ -186,11 +198,18 @@ const Crop_Recomendation = () => {
                 id="outlined-size-small"
                 defaultValue={potassium}
                 size="small"
-                onChange={e=>setPotassium(e.target.value)}
+                onChange={(e) => setPotassium(e.target.value)}
               />
             </Row>
           </>
         ) : null}
+        <button
+          onClick={() => {
+            handle_click();
+          }}
+        >
+          onClick
+        </button>
       </Input_Card>
     </BackContainer>
   );
