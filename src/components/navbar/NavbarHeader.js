@@ -11,6 +11,7 @@ const Navbar = styled.div`
   align-items: center;
   justify-content: center;
   position: absolute;
+  z-index: 999;
   .logo {
     z-index: 1;
 

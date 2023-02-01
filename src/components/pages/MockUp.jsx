@@ -7,6 +7,8 @@ import Home from "../layouts/Home";
 import TestHeading from "../layouts/TestHeading";
 import TestingArea from "../layouts/TestingArea";
 import Work from "../layouts/Work";
+import NavbarHeader from "../navbar/NavbarHeader";
+import Footer  from  "../layouts/Footer"
 
 const MockUpContainer = styled.div`
   background: #eefbf2;
@@ -15,6 +17,7 @@ const MockUpContainer = styled.div`
 const MockUp = () => {
   return (
     <MockUpContainer>
+      <NavbarHeader/>
       <Home />
       <TestHeading />
       <TestingArea />
@@ -22,6 +25,7 @@ const MockUp = () => {
       <Work />
       <Blog />
       <Aboutus />
+      <Footer/>
     </MockUpContainer>
   );
 };
